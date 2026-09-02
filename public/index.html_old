@@ -554,106 +554,16 @@
     }
     .type-tab.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
 
-    /* MOBILE BOTTOM NAV */
-    .mobile-topbar {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      height: 56px;
-      background: var(--navy);
-      z-index: 150;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 18px;
-    }
-    .mobile-topbar .brand { font-size: 18px; font-weight: 800; color: var(--white); }
-    .mobile-topbar .mob-top-right { display:flex; align-items:center; gap:10px; }
-    .mobile-topbar .mobile-user-avatar {
-      width: 34px; height: 34px; border-radius: 50%;
-      background: var(--gold);
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700; font-size: 14px; color: var(--navy);
-    }
-    .mob-logout-btn {
-      background: none; border: none; cursor: pointer;
-      color: rgba(255,255,255,.55); padding: 4px;
-    }
-    .mobile-bottom-nav {
-      display: none;
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      height: 62px;
-      background: var(--white);
-      border-top: 1px solid var(--border);
-      z-index: 150;
-      align-items: center;
-      justify-content: space-around;
-      box-shadow: 0 -4px 16px rgba(27,42,74,.08);
-    }
-    .mob-nav-item {
-      display: flex; flex-direction: column; align-items: center; gap: 3px;
-      padding: 8px 10px; cursor: pointer;
-      color: var(--text-light); font-size: 10.5px; font-weight: 600;
-      transition: color .15s; flex: 1; border: none; background: none;
-      font-family: "Cairo", sans-serif;
-    }
-    .mob-nav-item svg { opacity: .45; transition: opacity .15s; }
-    .mob-nav-item.active { color: var(--navy); }
-    .mob-nav-item.active svg { opacity: 1; }
-    .fab {
-      display: none;
-      position: fixed;
-      bottom: 78px; left: 18px;
-      width: 50px; height: 50px;
-      border-radius: 50%;
-      background: var(--gold);
-      color: var(--navy);
-      border: none; font-size: 24px;
-      cursor: pointer;
-      box-shadow: 0 4px 18px rgba(201,168,76,.5);
-      align-items: center; justify-content: center;
-      z-index: 140; transition: transform .15s;
-      font-weight: 700;
-    }
-    .fab:active { transform: scale(.91); }
-    .stat-card { position: relative; overflow: hidden; }
-    .empty-state {
-      display: flex; flex-direction: column; align-items: center;
-      padding: 56px 20px; color: var(--text-light);
-    }
-    .empty-state-icon {
-      width: 68px; height: 68px; border-radius: 50%;
-      background: var(--slate);
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 14px;
-    }
-    .empty-state h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 5px; }
-    .empty-state p { font-size: 13px; }
     @media (max-width: 900px) {
-      .sidebar { display: none !important; }
-      .main { margin-right: 0; padding-top: 56px; padding-bottom: 68px; }
-      .topbar { display: none; }
-      .mobile-topbar { display: flex; }
-      .mobile-bottom-nav { display: flex; }
-      .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+      .sidebar { display: none; }
+      .main { margin-right: 0; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
       .field-row { grid-template-columns: 1fr; }
-      .stat-card { padding: 18px 16px; }
-      .stat-value { font-size: 28px; }
-      #btn-add-worker, #btn-add-leave, #btn-add-guard { display: none !important; }
-      .fab { display: flex; }
-      .card-header { flex-wrap: wrap; gap: 8px; }
-      .type-tabs { gap: 6px; }
-      .type-tab { padding: 6px 12px; font-size: 12px; }
     }
     @media (max-width: 560px) {
-      .stats-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-      .content { padding: 12px; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .content { padding: 16px; }
       .login-card { padding: 36px 24px 28px; }
-      .stat-card { padding: 14px 14px; }
-      .stat-label { font-size: 11px; }
-      .stat-value { font-size: 24px; }
-      .stat-sub { font-size: 11px; }
-      .months-grid { grid-template-columns: repeat(3,1fr); gap: 8px; }
     }
   </style>
 </head>
@@ -693,25 +603,6 @@
 
 <!-- ══════════════════ APP ══════════════════ -->
 <div id="app">
-
-  <!-- Mobile Topbar -->
-  <div class="mobile-topbar" id="mobile-topbar">
-    <span class="brand">منظومة</span>
-    <div class="mob-top-right">
-      <div class="mobile-user-avatar" id="mob-avatar">م</div>
-      <button class="mob-logout-btn" onclick="doLogout()" title="تسجيل الخروج">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/>
-        </svg>
-      </button>
-    </div>
-  </div>
-
-  <!-- Mobile Bottom Nav -->
-  <nav class="mobile-bottom-nav" id="mobile-bottom-nav"></nav>
-
-  <!-- FAB -->
-  <button class="fab" id="fab-btn" onclick="fabAction()">+</button>
 
   <!-- Sidebar -->
   <aside class="sidebar">
@@ -1176,40 +1067,13 @@ function initApp() {
   }
 
   buildMonthsGrid();
-
-  // Mobile nav
-  document.getElementById('mob-avatar').textContent = currentUser.display[0];
-  const mobNav = document.getElementById('mobile-bottom-nav');
-  mobNav.innerHTML = nav.map(n => `
-    <button class="mob-nav-item ${n.id === 'dashboard' ? 'active' : ''}" onclick="goView('${n.id}')" data-view="${n.id}">
-      ${n.icon} <span>${n.label}</span>
-    </button>
-  `).join('');
-
-  // FAB visibility
-  updateFab();
   goView('dashboard');
-}
-
-function updateFab() {
-  const fab = document.getElementById('fab-btn');
-  const isAdmin = currentUser?.role === 'admin';
-  fab.style.display = (isAdmin && activeView !== 'dashboard') ? 'flex' : 'none';
-}
-
-function fabAction() {
-  if (activeView === 'workers')  openAddWorker();
-  else if (activeView === 'leaves') openAddLeave();
-  else if (activeView === 'guard')  openAddGuard();
 }
 
 function goView(v) {
   activeView = v;
   document.querySelectorAll('.view').forEach(el => el.classList.remove('active'));
   document.querySelectorAll('.nav-item').forEach(el => {
-    el.classList.toggle('active', el.dataset.view === v);
-  });
-  document.querySelectorAll('.mob-nav-item').forEach(el => {
     el.classList.toggle('active', el.dataset.view === v);
   });
   const titles = { dashboard: 'لوحة التحكم', workers: 'الموظفون', leaves: 'سجل الإجازات', guard: 'أيام الحراسة', mybalance: 'رصيدي' };
@@ -1222,8 +1086,6 @@ function goView(v) {
   if (v === 'workers')   renderWorkerTable();
   if (v === 'leaves')    renderLeaveTable();
   if (v === 'guard')     renderGuardTable();
-
-  if (typeof updateFab === 'function') updateFab();
 }
 
 // ══════════════════ DASHBOARD ══════════════════
@@ -1234,42 +1096,26 @@ function renderDashboard() {
   const month = new Date().getMonth();
   const thisMonthGuards    = guards.filter(g => new Date(g.date).getMonth() === month).length;
 
-  const shortPct = workers.length ? Math.round(totalShortConsumed / (workers.length * SHORT_LIMIT) * 100) : 0;
-  const longPct  = workers.length ? Math.round(totalLongConsumed  / (workers.length * LONG_LIMIT)  * 100) : 0;
   document.getElementById('stats-grid').innerHTML = `
     <div class="stat-card c-navy">
-      <svg class="stat-icon" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;top:10px;left:10px;opacity:.06"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
       <div class="stat-label">إجمالي الموظفين</div>
       <div class="stat-value">${workers.length}</div>
       <div class="stat-sub">موظف مسجل في النظام</div>
     </div>
     <div class="stat-card c-gold">
-      <svg class="stat-icon" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;top:10px;left:10px;opacity:.06"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-      <div class="stat-label">إجازة قصيرة مستهلكة</div>
-      <div class="stat-value">${totalShortConsumed}<span style="font-size:14px;font-weight:500;color:var(--text-light)"> يوم</span></div>
-      <div class="stat-sub" style="display:flex;align-items:center;gap:6px;margin-top:8px">
-        <div style="flex:1;height:5px;background:var(--slate-mid);border-radius:10px;overflow:hidden">
-          <div style="width:${shortPct}%;height:100%;background:var(--gold);border-radius:10px"></div>
-        </div>
-        <span>${shortPct}%</span>
-      </div>
+      <div class="stat-label">أيام إجازة قصيرة مستهلكة</div>
+      <div class="stat-value">${totalShortConsumed}</div>
+      <div class="stat-sub">من أصل ${workers.length * SHORT_LIMIT} يوم إجمالي</div>
     </div>
     <div class="stat-card c-success">
-      <svg class="stat-icon" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;top:10px;left:10px;opacity:.06"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-      <div class="stat-label">إجازة طويلة مستهلكة</div>
-      <div class="stat-value">${totalLongConsumed}<span style="font-size:14px;font-weight:500;color:var(--text-light)"> يوم</span></div>
-      <div class="stat-sub" style="display:flex;align-items:center;gap:6px;margin-top:8px">
-        <div style="flex:1;height:5px;background:var(--slate-mid);border-radius:10px;overflow:hidden">
-          <div style="width:${longPct}%;height:100%;background:var(--success);border-radius:10px"></div>
-        </div>
-        <span>${longPct}%</span>
-      </div>
+      <div class="stat-label">أيام إجازة طويلة مستهلكة</div>
+      <div class="stat-value">${totalLongConsumed}</div>
+      <div class="stat-sub">من أصل ${workers.length * LONG_LIMIT} يوم إجمالي</div>
     </div>
     <div class="stat-card c-warn">
-      <svg class="stat-icon" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;top:10px;left:10px;opacity:.06"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       <div class="stat-label">حراسات هذا الشهر</div>
       <div class="stat-value">${thisMonthGuards}</div>
-      <div class="stat-sub">إجمالي الحراسات: <strong>${totalGuards}</strong></div>
+      <div class="stat-sub">إجمالي الحراسات: ${totalGuards}</div>
     </div>
   `;
 
@@ -1290,7 +1136,7 @@ function renderDashboard() {
       <td>${progBar(lc, LONG_LIMIT)}</td>
       <td>${status}</td>
     </tr>`;
-  }).join('') || `<tr><td colspan="5"><div class="empty-state"><div class="empty-state-icon">${usersIcon().replace('width="16" height="16"','width="28" height="28"')}</div><h3>لا يوجد موظفون</h3><p>أضف موظفين أولاً من قسم الموظفين</p></div></td></tr>`;
+  }).join('') || `<tr><td colspan="5"><div class="empty-state"><p>لا يوجد موظفون</p></div></td></tr>`;
 }
 
 // ══════════════════ WORKERS ══════════════════
@@ -1445,11 +1291,7 @@ function renderLeaveTable() {
   const isAdmin = currentUser?.role === 'admin';
   const tbody = document.getElementById('leaves-tbody');
   if (!filtered.length) {
-    tbody.innerHTML = `<tr><td colspan="8"><div class="empty-state">
-      <div class="empty-state-icon">${calIcon().replace('width="16" height="16"','width="28" height="28"')}</div>
-      <h3>لا توجد إجازات مسجلة</h3>
-      <p>سجّل إجازة جديدة من خلال زر "تسجيل إجازة"</p>
-    </div></td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="8"><div class="empty-state">${emptyIcon()}<p>لا توجد إجازات مسجلة</p></div></td></tr>`;
     return;
   }
   tbody.innerHTML = filtered.map((l, i) => {
@@ -1563,11 +1405,7 @@ function renderGuardTable() {
   const isAdmin = currentUser?.role === 'admin';
   const tbody = document.getElementById('guard-tbody');
   if (!filtered.length) {
-    tbody.innerHTML = `<tr><td colspan="6"><div class="empty-state">
-      <div class="empty-state-icon">${shieldIcon().replace('width="16" height="16"','width="28" height="28"')}</div>
-      <h3>لا توجد حراسات لهذا الشهر</h3>
-      <p>أضف يوم حراسة من زر "إضافة حراسة"</p>
-    </div></td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="6"><div class="empty-state">${emptyIcon()}<p>لا توجد حراسات لهذا الشهر</p></div></td></tr>`;
     return;
   }
   tbody.innerHTML = filtered.map((g, i) => {
