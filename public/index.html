@@ -68,7 +68,6 @@
       bottom: -80px; right: -60px;
       pointer-events: none;
     }
-
     .login-card {
       background: var(--white);
       border-radius: 18px;
@@ -79,214 +78,166 @@
       position: relative;
       z-index: 1;
     }
-
-    .login-logo {
-      text-align: center;
-      margin-bottom: 36px;
-    }
+    .login-logo { text-align: center; margin-bottom: 36px; }
     .login-logo .logo-mark {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+      display: inline-flex; align-items: center; justify-content: center;
       width: 64px; height: 64px;
-      background: var(--navy);
-      border-radius: 16px;
-      margin-bottom: 16px;
+      background: var(--navy); border-radius: 16px; margin-bottom: 16px;
     }
     .login-logo .logo-mark svg { display: block; }
-    .login-logo h1 {
-      font-size: 26px;
-      font-weight: 800;
-      color: var(--navy);
-      letter-spacing: -.3px;
-    }
-    .login-logo p {
-      font-size: 13px;
-      color: var(--text-light);
-      margin-top: 4px;
-    }
-
+    .login-logo h1 { font-size: 26px; font-weight: 800; color: var(--navy); }
+    .login-logo p { font-size: 13px; color: var(--text-light); margin-top: 4px; }
     .form-group { margin-bottom: 20px; }
-    .form-group label {
-      display: block;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text-light);
-      margin-bottom: 7px;
-    }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--text-light); margin-bottom: 7px; }
     .form-group input {
-      width: 100%;
-      padding: 12px 16px;
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius);
-      font-family: 'Cairo', sans-serif;
-      font-size: 14px;
-      color: var(--text);
-      background: var(--white);
-      transition: border-color .2s;
-      outline: none;
+      width: 100%; padding: 12px 16px;
+      border: 1.5px solid var(--border); border-radius: var(--radius);
+      font-family: 'Cairo', sans-serif; font-size: 14px; color: var(--text);
+      background: var(--white); transition: border-color .2s; outline: none;
     }
     .form-group input:focus { border-color: var(--navy); }
-
     .login-error {
-      background: var(--danger-bg);
-      color: var(--danger);
-      border-radius: 8px;
-      padding: 10px 14px;
-      font-size: 13px;
-      margin-bottom: 16px;
-      display: none;
+      background: var(--danger-bg); color: var(--danger);
+      border-radius: 8px; padding: 10px 14px; font-size: 13px;
+      margin-bottom: 16px; display: none;
     }
-
     .btn-primary {
-      width: 100%;
-      padding: 13px;
-      background: var(--navy);
-      color: var(--white);
-      border: none;
-      border-radius: var(--radius);
-      font-family: 'Cairo', sans-serif;
-      font-size: 15px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background .2s, transform .1s;
+      width: 100%; padding: 13px;
+      background: var(--navy); color: var(--white);
+      border: none; border-radius: var(--radius);
+      font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700;
+      cursor: pointer; transition: background .2s, transform .1s;
     }
     .btn-primary:hover { background: var(--navy-light); }
     .btn-primary:active { transform: scale(.98); }
-
-    .login-footer {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 12px;
-      color: var(--text-light);
-    }
+    .login-footer { text-align: center; margin-top: 20px; font-size: 12px; color: var(--text-light); }
 
     /* ─── APP SHELL ─────────────────────────────── */
-    #app {
-      display: none;
-      min-height: 100vh;
-    }
+    #app { display: none; min-height: 100vh; }
 
-    /* Sidebar */
+    /* ── DESKTOP SIDEBAR ── */
     .sidebar {
-      position: fixed;
-      top: 0; right: 0;
-      width: 248px;
-      height: 100vh;
+      position: fixed; top: 0; right: 0;
+      width: 248px; height: 100vh;
       background: var(--navy);
-      display: flex;
-      flex-direction: column;
-      z-index: 100;
-      overflow-y: auto;
+      display: flex; flex-direction: column;
+      z-index: 100; overflow-y: auto;
     }
-
-    .sidebar-brand {
-      padding: 28px 24px 24px;
-      border-bottom: 1px solid rgba(255,255,255,.08);
-    }
-    .sidebar-brand .brand-name {
-      font-size: 22px;
-      font-weight: 800;
-      color: var(--white);
-    }
-    .sidebar-brand .brand-sub {
-      font-size: 11.5px;
-      color: rgba(255,255,255,.45);
-      margin-top: 2px;
-    }
-
-    .sidebar-nav {
-      padding: 16px 0;
-      flex: 1;
-    }
-    .nav-section-label {
-      padding: 10px 24px 6px;
-      font-size: 10.5px;
-      font-weight: 700;
-      color: rgba(255,255,255,.3);
-      letter-spacing: .5px;
-    }
+    .sidebar-brand { padding: 28px 24px 24px; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .sidebar-brand .brand-name { font-size: 22px; font-weight: 800; color: var(--white); }
+    .sidebar-brand .brand-sub { font-size: 11.5px; color: rgba(255,255,255,.45); margin-top: 2px; }
+    .sidebar-nav { padding: 16px 0; flex: 1; }
     .nav-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
+      display: flex; align-items: center; gap: 12px;
       padding: 11px 24px;
-      color: rgba(255,255,255,.65);
-      font-size: 14px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background .15s, color .15s;
+      color: rgba(255,255,255,.65); font-size: 14px; font-weight: 500;
+      cursor: pointer; transition: background .15s, color .15s;
       border-right: 3px solid transparent;
     }
     .nav-item:hover { background: rgba(255,255,255,.06); color: var(--white); }
-    .nav-item.active {
-      background: rgba(201,168,76,.12);
-      color: var(--gold-light);
-      border-right-color: var(--gold);
-    }
+    .nav-item.active { background: rgba(201,168,76,.12); color: var(--gold-light); border-right-color: var(--gold); }
     .nav-item svg { flex-shrink: 0; opacity: .8; }
     .nav-item.active svg { opacity: 1; }
-
     .sidebar-user {
-      padding: 18px 24px;
-      border-top: 1px solid rgba(255,255,255,.08);
-      display: flex;
-      align-items: center;
-      gap: 12px;
+      padding: 18px 24px; border-top: 1px solid rgba(255,255,255,.08);
+      display: flex; align-items: center; gap: 12px;
     }
     .user-avatar {
-      width: 38px; height: 38px;
-      border-radius: 50%;
+      width: 38px; height: 38px; border-radius: 50%;
       background: var(--gold);
       display: flex; align-items: center; justify-content: center;
-      font-weight: 700; font-size: 15px; color: var(--navy);
-      flex-shrink: 0;
+      font-weight: 700; font-size: 15px; color: var(--navy); flex-shrink: 0;
     }
     .user-info .user-name { font-size: 13px; font-weight: 600; color: var(--white); }
     .user-info .user-role { font-size: 11px; color: rgba(255,255,255,.4); }
     .logout-btn {
-      margin-right: auto;
-      background: none; border: none; cursor: pointer;
-      color: rgba(255,255,255,.35);
-      transition: color .15s;
-      padding: 4px;
+      margin-right: auto; background: none; border: none; cursor: pointer;
+      color: rgba(255,255,255,.4); transition: color .15s; padding: 4px;
     }
-    .logout-btn:hover { color: rgba(255,255,255,.8); }
+    .logout-btn:hover { color: rgba(255,255,255,.9); }
 
-    /* Main */
-    .main {
-      margin-right: 248px;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
+    /* ── DESKTOP MAIN ── */
+    .main { margin-right: 248px; min-height: 100vh; display: flex; flex-direction: column; }
     .topbar {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      padding: 0 32px;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 50;
+      background: var(--white); border-bottom: 1px solid var(--border);
+      padding: 0 32px; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 50;
     }
-    .topbar-title {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--navy);
-    }
+    .topbar-title { font-size: 18px; font-weight: 700; color: var(--navy); }
     .topbar-actions { display: flex; align-items: center; gap: 12px; }
+    .content { padding: 32px; flex: 1; }
 
+    /* ── MOBILE TOPBAR ── */
+    .mob-topbar {
+      display: none;
+      position: fixed; top: 0; left: 0; right: 0; height: 58px;
+      background: var(--navy); z-index: 200;
+      align-items: center; justify-content: space-between;
+      padding: 0 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.2);
+    }
+    .mob-topbar-left { display: flex; align-items: center; gap: 10px; }
+    .mob-brand { font-size: 17px; font-weight: 800; color: var(--white); }
+    .mob-role-badge {
+      background: rgba(201,168,76,.2); color: var(--gold-light);
+      font-size: 11px; font-weight: 700;
+      padding: 2px 8px; border-radius: 20px;
+    }
+    .mob-topbar-right { display: flex; align-items: center; gap: 8px; }
+    .mob-avatar {
+      width: 34px; height: 34px; border-radius: 50%;
+      background: var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 14px; color: var(--navy);
+    }
+    .mob-logout {
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15);
+      border-radius: 8px; padding: 6px 10px; cursor: pointer;
+      color: rgba(255,255,255,.8); display: flex; align-items: center; gap: 5px;
+      font-family: 'Cairo', sans-serif; font-size: 12px; font-weight: 600;
+    }
+    .mob-logout:active { background: rgba(255,255,255,.2); }
+
+    /* ── MOBILE BOTTOM NAV ── */
+    .mob-bottom-nav {
+      display: none;
+      position: fixed; bottom: 0; left: 0; right: 0; height: 66px;
+      background: var(--white); border-top: 1.5px solid var(--border);
+      z-index: 200; align-items: center; justify-content: space-around;
+      box-shadow: 0 -4px 20px rgba(27,42,74,.10);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    .mob-nav-btn {
+      display: flex; flex-direction: column; align-items: center; gap: 2px;
+      padding: 6px 8px; cursor: pointer; flex: 1;
+      background: none; border: none;
+      font-family: 'Cairo', sans-serif; font-size: 10px; font-weight: 600;
+      color: var(--text-light); transition: color .15s;
+    }
+    .mob-nav-btn svg { opacity: .4; transition: opacity .15s; }
+    .mob-nav-btn.active { color: var(--navy); }
+    .mob-nav-btn.active svg { opacity: 1; }
+
+    /* ── FAB ── */
+    .mob-fab {
+      display: none;
+      position: fixed; bottom: 82px; left: 18px;
+      width: 52px; height: 52px; border-radius: 50%;
+      background: var(--gold); color: var(--navy);
+      border: none; font-size: 26px; font-weight: 700;
+      cursor: pointer; z-index: 190;
+      box-shadow: 0 4px 20px rgba(201,168,76,.55);
+      align-items: center; justify-content: center;
+      transition: transform .15s;
+    }
+    .mob-fab:active { transform: scale(.9); }
+
+    /* ─── COMMON UI ─────────────────────────────── */
     .badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 3px 10px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 600;
+      display: inline-flex; align-items: center;
+      padding: 3px 10px; border-radius: 20px;
+      font-size: 12px; font-weight: 600;
     }
     .badge-navy { background: var(--navy); color: var(--white); }
     .badge-gold { background: #FDF3DC; color: #8a6320; }
@@ -294,117 +245,73 @@
     .badge-warn { background: var(--warn-bg); color: var(--warn); }
     .badge-danger { background: var(--danger-bg); color: var(--danger); }
 
-    .content { padding: 32px; flex: 1; }
-
-    /* ─── VIEWS ─────────────────────────────────── */
     .view { display: none; }
     .view.active { display: block; }
 
-    /* Stats row */
+    /* Stats */
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-bottom: 32px;
+      gap: 20px; margin-bottom: 28px;
     }
     .stat-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 24px 22px;
-      box-shadow: var(--shadow);
-      border-top: 3px solid transparent;
+      background: var(--white); border-radius: var(--radius);
+      padding: 22px 20px; box-shadow: var(--shadow);
+      border-top: 3px solid transparent; position: relative; overflow: hidden;
     }
     .stat-card.c-navy { border-top-color: var(--navy); }
     .stat-card.c-gold  { border-top-color: var(--gold); }
     .stat-card.c-success { border-top-color: var(--success); }
     .stat-card.c-warn { border-top-color: var(--warn); }
-
-    .stat-label { font-size: 12.5px; color: var(--text-light); font-weight: 600; margin-bottom: 8px; }
-    .stat-value { font-size: 34px; font-weight: 800; color: var(--navy); line-height: 1; }
-    .stat-sub { font-size: 12px; color: var(--text-light); margin-top: 6px; }
+    .stat-label { font-size: 12px; color: var(--text-light); font-weight: 600; margin-bottom: 6px; }
+    .stat-value { font-size: 32px; font-weight: 800; color: var(--navy); line-height: 1; }
+    .stat-sub { font-size: 11.5px; color: var(--text-light); margin-top: 6px; }
+    .stat-mini-bar { height: 4px; background: var(--slate-mid); border-radius: 10px; overflow: hidden; margin-top: 10px; }
+    .stat-mini-fill { height: 100%; border-radius: 10px; }
 
     /* Cards */
-    .card {
-      background: var(--white);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      margin-bottom: 24px;
-    }
+    .card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; margin-bottom: 24px; }
     .card-header {
-      padding: 18px 24px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
+      padding: 16px 20px; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
     }
     .card-title { font-size: 15px; font-weight: 700; color: var(--navy); }
-    .card-body { padding: 24px; }
+    .card-body { padding: 20px; }
 
     /* Table */
     .table-wrap { overflow-x: auto; }
     table { width: 100%; border-collapse: collapse; }
     th {
-      text-align: right;
-      padding: 11px 16px;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--text-light);
-      background: var(--slate);
-      border-bottom: 1px solid var(--border);
-      white-space: nowrap;
+      text-align: right; padding: 10px 14px;
+      font-size: 12px; font-weight: 700; color: var(--text-light);
+      background: var(--slate); border-bottom: 1px solid var(--border); white-space: nowrap;
     }
-    td {
-      padding: 13px 16px;
-      font-size: 13.5px;
-      border-bottom: 1px solid var(--border);
-      vertical-align: middle;
-    }
+    td { padding: 12px 14px; font-size: 13px; border-bottom: 1px solid var(--border); vertical-align: middle; }
     tr:last-child td { border-bottom: none; }
     tr:hover td { background: #f8fafd; }
 
     /* Progress bar */
-    .prog-wrap { display: flex; align-items: center; gap: 10px; }
-    .prog-bar {
-      flex: 1; height: 7px;
-      background: var(--slate-mid);
-      border-radius: 10px;
-      overflow: hidden;
-      min-width: 60px;
-    }
-    .prog-fill {
-      height: 100%;
-      border-radius: 10px;
-      transition: width .4s ease;
-    }
+    .prog-wrap { display: flex; align-items: center; gap: 8px; }
+    .prog-bar { flex: 1; height: 6px; background: var(--slate-mid); border-radius: 10px; overflow: hidden; min-width: 50px; }
+    .prog-fill { height: 100%; border-radius: 10px; transition: width .4s; }
     .prog-fill.c-success { background: var(--success); }
     .prog-fill.c-warn { background: var(--warn); }
     .prog-fill.c-danger { background: var(--danger); }
-    .prog-label { font-size: 12px; font-weight: 600; color: var(--text-light); white-space: nowrap; }
+    .prog-label { font-size: 11.5px; font-weight: 600; color: var(--text-light); white-space: nowrap; }
 
     /* Buttons */
     .btn {
       display: inline-flex; align-items: center; gap: 6px;
-      padding: 9px 18px;
-      border-radius: 8px;
-      font-family: 'Cairo', sans-serif;
-      font-size: 13.5px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all .15s;
-      border: none;
+      padding: 9px 16px; border-radius: 8px;
+      font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 600;
+      cursor: pointer; transition: all .15s; border: none; white-space: nowrap;
     }
-    .btn-sm { padding: 6px 12px; font-size: 12.5px; }
+    .btn-sm { padding: 6px 11px; font-size: 12px; }
     .btn-navy { background: var(--navy); color: var(--white); }
     .btn-navy:hover { background: var(--navy-light); }
     .btn-gold { background: var(--gold); color: var(--navy); }
     .btn-gold:hover { background: var(--gold-light); }
-    .btn-outline {
-      background: transparent;
-      border: 1.5px solid var(--border);
-      color: var(--text);
-    }
+    .btn-outline { background: transparent; border: 1.5px solid var(--border); color: var(--text); }
     .btn-outline:hover { border-color: var(--navy); color: var(--navy); }
     .btn-danger { background: var(--danger-bg); color: var(--danger); }
     .btn-danger:hover { background: var(--danger); color: var(--white); }
@@ -412,248 +319,120 @@
     /* Modal */
     .modal-overlay {
       position: fixed; inset: 0;
-      background: rgba(10,18,35,.5);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 200;
-      backdrop-filter: blur(2px);
+      background: rgba(10,18,35,.55);
+      display: none; align-items: center; justify-content: center;
+      z-index: 300; backdrop-filter: blur(2px);
     }
     .modal-overlay.open { display: flex; }
     .modal {
-      background: var(--white);
-      border-radius: 16px;
-      width: 520px; max-width: 95vw;
-      max-height: 90vh;
-      overflow-y: auto;
-      box-shadow: var(--shadow-lg);
+      background: var(--white); border-radius: 16px;
+      width: 520px; max-width: 96vw; max-height: 90vh;
+      overflow-y: auto; box-shadow: var(--shadow-lg);
     }
     .modal-header {
-      padding: 22px 28px 18px;
-      border-bottom: 1px solid var(--border);
+      padding: 20px 24px 16px; border-bottom: 1px solid var(--border);
       display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; background: var(--white); z-index: 1;
     }
-    .modal-title { font-size: 17px; font-weight: 700; color: var(--navy); }
-    .modal-close {
-      background: none; border: none; cursor: pointer;
-      color: var(--text-light); font-size: 22px; line-height: 1;
-      transition: color .15s;
-    }
+    .modal-title { font-size: 16px; font-weight: 700; color: var(--navy); }
+    .modal-close { background: none; border: none; cursor: pointer; color: var(--text-light); font-size: 22px; line-height: 1; }
     .modal-close:hover { color: var(--danger); }
-    .modal-body { padding: 24px 28px; }
-    .modal-footer {
-      padding: 16px 28px;
-      border-top: 1px solid var(--border);
-      display: flex; justify-content: flex-end; gap: 10px;
-    }
+    .modal-body { padding: 20px 24px; }
+    .modal-footer { padding: 14px 24px; border-top: 1px solid var(--border); display: flex; justify-content: flex-end; gap: 10px; }
 
-    /* Form inside modal */
-    .field { margin-bottom: 18px; }
-    .field label { display: block; font-size: 13px; font-weight: 600; color: var(--text-light); margin-bottom: 6px; }
+    /* Fields */
+    .field { margin-bottom: 16px; }
+    .field label { display: block; font-size: 13px; font-weight: 600; color: var(--text-light); margin-bottom: 5px; }
     .field input, .field select, .field textarea {
-      width: 100%;
-      padding: 10px 14px;
-      border: 1.5px solid var(--border);
-      border-radius: 8px;
-      font-family: 'Cairo', sans-serif;
-      font-size: 14px;
-      color: var(--text);
-      background: var(--white);
-      outline: none;
-      transition: border-color .2s;
+      width: 100%; padding: 10px 13px;
+      border: 1.5px solid var(--border); border-radius: 8px;
+      font-family: 'Cairo', sans-serif; font-size: 14px; color: var(--text);
+      background: var(--white); outline: none; transition: border-color .2s;
     }
     .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--navy); }
-    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
-    /* Guard table specifics */
-    .month-nav { display: flex; align-items: center; gap: 12px; }
-    .month-nav span { font-size: 16px; font-weight: 700; color: var(--navy); min-width: 140px; text-align: center; }
+    /* Search */
+    .search-wrap { position: relative; display: inline-block; }
+    .search-wrap svg { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); pointer-events: none; }
+    .search-input {
+      padding: 9px 13px 9px 36px;
+      border: 1.5px solid var(--border); border-radius: 8px;
+      font-family: 'Cairo', sans-serif; font-size: 13px; outline: none;
+      transition: border-color .2s; direction: rtl; min-width: 200px;
+    }
+    .search-input:focus { border-color: var(--navy); }
 
-    /* Alert / toast */
+    /* Month pills */
+    .months-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 16px; }
+    .month-pill {
+      padding: 7px; border-radius: 8px; border: 1.5px solid var(--border);
+      text-align: center; font-size: 12.5px; font-weight: 600;
+      cursor: pointer; transition: all .15s; color: var(--text);
+    }
+    .month-pill:hover { border-color: var(--navy); color: var(--navy); }
+    .month-pill.active-month { background: var(--navy); color: var(--white); border-color: var(--navy); }
+
+    /* Type tabs */
+    .type-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+    .type-tab {
+      padding: 6px 14px; border-radius: 8px; border: 1.5px solid var(--border);
+      font-size: 13px; font-weight: 600; cursor: pointer; transition: all .15s;
+      color: var(--text-light); background: none; font-family: 'Cairo', sans-serif;
+    }
+    .type-tab.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+
+    /* Empty state */
+    .empty-state { text-align: center; padding: 56px 20px; color: var(--text-light); }
+    .empty-state .es-icon {
+      width: 64px; height: 64px; border-radius: 50%; background: var(--slate);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 14px;
+    }
+    .empty-state h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .empty-state p { font-size: 13px; }
+
+    /* Toast */
     .toast {
-      position: fixed;
-      bottom: 28px; left: 50%;
+      position: fixed; bottom: 80px; left: 50%;
       transform: translateX(-50%) translateY(80px);
-      background: var(--navy-dark);
-      color: var(--white);
-      padding: 13px 24px;
-      border-radius: 10px;
-      font-size: 14px;
-      font-weight: 600;
-      z-index: 999;
-      transition: transform .3s ease;
-      box-shadow: var(--shadow-lg);
-      white-space: nowrap;
+      background: var(--navy-dark); color: var(--white);
+      padding: 12px 22px; border-radius: 10px;
+      font-size: 14px; font-weight: 600; z-index: 9999;
+      transition: transform .3s; box-shadow: var(--shadow-lg); white-space: nowrap;
     }
     .toast.show { transform: translateX(-50%) translateY(0); }
     .toast.success { background: var(--success); }
     .toast.error { background: var(--danger); }
 
-    /* Empty state */
-    .empty-state {
-      text-align: center;
-      padding: 60px 20px;
-      color: var(--text-light);
-    }
-    .empty-state svg { margin-bottom: 16px; opacity: .3; }
-    .empty-state p { font-size: 14px; }
-
-    /* Search */
-    .search-input {
-      padding: 9px 14px 9px 38px;
-      border: 1.5px solid var(--border);
-      border-radius: 8px;
-      font-family: 'Cairo', sans-serif;
-      font-size: 13.5px;
-      outline: none;
-      transition: border-color .2s;
-      min-width: 220px;
-      direction: rtl;
-    }
-    .search-wrap { position: relative; display: inline-block; }
-    .search-wrap svg { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); pointer-events: none; }
-    .search-input:focus { border-color: var(--navy); }
-
     /* Scrollbar */
-    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar { width: 5px; height: 5px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: var(--slate-mid); border-radius: 10px; }
 
-    /* Month pill grid */
-    .months-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-    .month-pill {
-      padding: 8px;
-      border-radius: 8px;
-      border: 1.5px solid var(--border);
-      text-align: center;
-      font-size: 13px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all .15s;
-      color: var(--text);
-    }
-    .month-pill:hover { border-color: var(--navy); color: var(--navy); }
-    .month-pill.active-month { background: var(--navy); color: var(--white); border-color: var(--navy); }
-
-    /* Day type pills */
-    .type-tabs { display: flex; gap: 8px; margin-bottom: 20px; }
-    .type-tab {
-      padding: 7px 18px;
-      border-radius: 8px;
-      border: 1.5px solid var(--border);
-      font-size: 13px; font-weight: 600;
-      cursor: pointer; transition: all .15s;
-      color: var(--text-light);
-      background: none;
-      font-family: 'Cairo', sans-serif;
-    }
-    .type-tab.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
-
-    /* MOBILE BOTTOM NAV */
-    .mobile-topbar {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      height: 56px;
-      background: var(--navy);
-      z-index: 150;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 18px;
-    }
-    .mobile-topbar .brand { font-size: 18px; font-weight: 800; color: var(--white); }
-    .mobile-topbar .mob-top-right { display:flex; align-items:center; gap:10px; }
-    .mobile-topbar .mobile-user-avatar {
-      width: 34px; height: 34px; border-radius: 50%;
-      background: var(--gold);
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700; font-size: 14px; color: var(--navy);
-    }
-    .mob-logout-btn {
-      background: none; border: none; cursor: pointer;
-      color: rgba(255,255,255,.55); padding: 4px;
-    }
-    .mobile-bottom-nav {
-      display: none;
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      height: 62px;
-      background: var(--white);
-      border-top: 1px solid var(--border);
-      z-index: 150;
-      align-items: center;
-      justify-content: space-around;
-      box-shadow: 0 -4px 16px rgba(27,42,74,.08);
-    }
-    .mob-nav-item {
-      display: flex; flex-direction: column; align-items: center; gap: 3px;
-      padding: 8px 10px; cursor: pointer;
-      color: var(--text-light); font-size: 10.5px; font-weight: 600;
-      transition: color .15s; flex: 1; border: none; background: none;
-      font-family: "Cairo", sans-serif;
-    }
-    .mob-nav-item svg { opacity: .45; transition: opacity .15s; }
-    .mob-nav-item.active { color: var(--navy); }
-    .mob-nav-item.active svg { opacity: 1; }
-    .fab {
-      display: none;
-      position: fixed;
-      bottom: 78px; left: 18px;
-      width: 50px; height: 50px;
-      border-radius: 50%;
-      background: var(--gold);
-      color: var(--navy);
-      border: none; font-size: 24px;
-      cursor: pointer;
-      box-shadow: 0 4px 18px rgba(201,168,76,.5);
-      align-items: center; justify-content: center;
-      z-index: 140; transition: transform .15s;
-      font-weight: 700;
-    }
-    .fab:active { transform: scale(.91); }
-    .stat-card { position: relative; overflow: hidden; }
-    .empty-state {
-      display: flex; flex-direction: column; align-items: center;
-      padding: 56px 20px; color: var(--text-light);
-    }
-    .empty-state-icon {
-      width: 68px; height: 68px; border-radius: 50%;
-      background: var(--slate);
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 14px;
-    }
-    .empty-state h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 5px; }
-    .empty-state p { font-size: 13px; }
+    /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       .sidebar { display: none !important; }
-      .main { margin-right: 0; padding-top: 56px; padding-bottom: 68px; }
+      .main { margin-right: 0; padding-top: 58px; padding-bottom: 70px; }
       .topbar { display: none; }
-      .mobile-topbar { display: flex; }
-      .mobile-bottom-nav { display: flex; }
-      .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
-      .field-row { grid-template-columns: 1fr; }
-      .stat-card { padding: 18px 16px; }
-      .stat-value { font-size: 28px; }
-      #btn-add-worker, #btn-add-leave, #btn-add-guard { display: none !important; }
-      .fab { display: flex; }
-      .card-header { flex-wrap: wrap; gap: 8px; }
-      .type-tabs { gap: 6px; }
-      .type-tab { padding: 6px 12px; font-size: 12px; }
-    }
-    @media (max-width: 560px) {
-      .stats-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-      .content { padding: 12px; }
-      .login-card { padding: 36px 24px 28px; }
-      .stat-card { padding: 14px 14px; }
+      .mob-topbar { display: flex; }
+      .mob-bottom-nav { display: flex; }
+      .mob-fab { display: flex; }
+      .content { padding: 14px; }
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+      .stat-card { padding: 14px 13px; }
+      .stat-value { font-size: 26px; }
       .stat-label { font-size: 11px; }
-      .stat-value { font-size: 24px; }
-      .stat-sub { font-size: 11px; }
-      .months-grid { grid-template-columns: repeat(3,1fr); gap: 8px; }
+      .stat-sub { font-size: 10.5px; }
+      /* Hide desktop add buttons — FAB handles it on mobile */
+      .desktop-add-btn { display: none !important; }
+      .field-row { grid-template-columns: 1fr; }
+      .months-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+      .stat-value { font-size: 22px; }
+      .login-card { padding: 32px 20px 28px; }
     }
   </style>
 </head>
@@ -673,9 +452,7 @@
       <h1>منظومة</h1>
       <p>نظام إدارة الموارد البشرية</p>
     </div>
-
     <div class="login-error" id="login-error">اسم المستخدم أو كلمة المرور غير صحيحة</div>
-
     <div class="form-group">
       <label>اسم المستخدم</label>
       <input type="text" id="inp-user" placeholder="أدخل اسم المستخدم" autocomplete="username" />
@@ -684,9 +461,7 @@
       <label>كلمة المرور</label>
       <input type="password" id="inp-pass" placeholder="أدخل كلمة المرور" autocomplete="current-password" />
     </div>
-
     <button class="btn-primary" onclick="doLogin()">دخول</button>
-
     <div class="login-footer">جميع الحقوق محفوظة &copy; 2025 منظومة</div>
   </div>
 </div>
@@ -695,35 +470,27 @@
 <div id="app">
 
   <!-- Mobile Topbar -->
-  <div class="mobile-topbar" id="mobile-topbar">
-    <span class="brand">منظومة</span>
-    <div class="mob-top-right">
-      <div class="mobile-user-avatar" id="mob-avatar">م</div>
-      <button class="mob-logout-btn" onclick="doLogout()" title="تسجيل الخروج">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/>
-        </svg>
+  <div class="mob-topbar" id="mob-topbar">
+    <div class="mob-topbar-left">
+      <span class="mob-brand">منظومة</span>
+      <span class="mob-role-badge" id="mob-role-badge">مدير</span>
+    </div>
+    <div class="mob-topbar-right">
+      <div class="mob-avatar" id="mob-avatar">م</div>
+      <button class="mob-logout" onclick="doLogout()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        خروج
       </button>
     </div>
   </div>
 
-  <!-- Mobile Bottom Nav -->
-  <nav class="mobile-bottom-nav" id="mobile-bottom-nav"></nav>
-
-  <!-- FAB -->
-  <button class="fab" id="fab-btn" onclick="fabAction()">+</button>
-
-  <!-- Sidebar -->
+  <!-- Desktop Sidebar -->
   <aside class="sidebar">
     <div class="sidebar-brand">
       <div class="brand-name">منظومة</div>
       <div class="brand-sub">إدارة الموارد البشرية</div>
     </div>
-
-    <nav class="sidebar-nav" id="sidebar-nav">
-      <!-- injected by JS -->
-    </nav>
-
+    <nav class="sidebar-nav" id="sidebar-nav"></nav>
     <div class="sidebar-user">
       <div class="user-avatar" id="sidebar-avatar">م</div>
       <div class="user-info">
@@ -738,7 +505,7 @@
     </div>
   </aside>
 
-  <!-- Main area -->
+  <!-- Main -->
   <div class="main">
     <header class="topbar">
       <span class="topbar-title" id="topbar-title">لوحة التحكم</span>
@@ -747,20 +514,19 @@
 
     <div class="content">
 
-      <!-- ── DASHBOARD ── -->
+      <!-- DASHBOARD -->
       <div id="view-dashboard" class="view">
         <div class="stats-grid" id="stats-grid"></div>
         <div class="card">
           <div class="card-header">
             <span class="card-title">أرصدة الإجازات — نظرة عامة</span>
           </div>
-          <div class="card-body">
+          <div class="card-body" style="padding:0">
             <div class="table-wrap">
               <table id="dash-table">
                 <thead>
                   <tr>
-                    <th>الموظف</th>
-                    <th>القسم</th>
+                    <th>الموظف</th><th>القسم</th>
                     <th>إجازة قصيرة (15 يوم)</th>
                     <th>إجازة طويلة (30 يوم)</th>
                     <th>الحالة</th>
@@ -773,20 +539,18 @@
         </div>
       </div>
 
-      <!-- ── WORKERS ── -->
+      <!-- WORKERS -->
       <div id="view-workers" class="view">
         <div class="card">
           <div class="card-header">
             <span class="card-title">قائمة الموظفين</span>
-            <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
               <div class="search-wrap">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9aa5b8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                </svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9aa5b8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                 <input class="search-input" id="worker-search" placeholder="بحث باسم الموظف…" oninput="renderWorkerTable()" />
               </div>
-              <button class="btn btn-navy" id="btn-add-worker" onclick="openAddWorker()" style="display:none">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <button class="btn btn-navy desktop-add-btn" id="btn-add-worker" onclick="openAddWorker()" style="display:none">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                 إضافة موظف
               </button>
             </div>
@@ -796,14 +560,8 @@
               <table>
                 <thead>
                   <tr>
-                    <th>#</th>
-                    <th>الاسم الكامل</th>
-                    <th>القسم</th>
-                    <th>المنصب</th>
-                    <th>إجازة قصيرة</th>
-                    <th>إجازة طويلة</th>
-                    <th>أيام الحراسة</th>
-                    <th>الإجراءات</th>
+                    <th>#</th><th>الاسم الكامل</th><th>القسم</th><th>المنصب</th>
+                    <th>إجازة قصيرة</th><th>إجازة طويلة</th><th>الحراسة</th><th>الإجراءات</th>
                   </tr>
                 </thead>
                 <tbody id="workers-tbody"></tbody>
@@ -813,19 +571,19 @@
         </div>
       </div>
 
-      <!-- ── LEAVES ── -->
+      <!-- LEAVES -->
       <div id="view-leaves" class="view">
         <div class="card">
           <div class="card-header">
             <span class="card-title">سجل الإجازات</span>
-            <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
               <div class="type-tabs" id="leave-filter-tabs">
                 <button class="type-tab active" onclick="filterLeaves('all', this)">الكل</button>
                 <button class="type-tab" onclick="filterLeaves('short', this)">قصيرة</button>
                 <button class="type-tab" onclick="filterLeaves('long', this)">طويلة</button>
               </div>
-              <button class="btn btn-navy" id="btn-add-leave" onclick="openAddLeave()" style="display:none">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <button class="btn btn-navy desktop-add-btn" id="btn-add-leave" onclick="openAddLeave()" style="display:none">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                 تسجيل إجازة
               </button>
             </div>
@@ -835,14 +593,8 @@
               <table>
                 <thead>
                   <tr>
-                    <th>#</th>
-                    <th>الموظف</th>
-                    <th>النوع</th>
-                    <th>من</th>
-                    <th>إلى</th>
-                    <th>عدد الأيام</th>
-                    <th>ملاحظة</th>
-                    <th id="leaves-action-head"></th>
+                    <th>#</th><th>الموظف</th><th>النوع</th><th>من</th><th>إلى</th>
+                    <th>الأيام</th><th>ملاحظة</th><th id="leaves-action-head"></th>
                   </tr>
                 </thead>
                 <tbody id="leaves-tbody"></tbody>
@@ -852,18 +604,18 @@
         </div>
       </div>
 
-      <!-- ── GUARD DUTY ── -->
+      <!-- GUARD -->
       <div id="view-guard" class="view">
-        <div class="card" style="margin-bottom:20px">
-          <div class="card-body" style="padding:16px 24px">
+        <div class="card" style="margin-bottom:16px">
+          <div class="card-body" style="padding:14px 16px">
             <div class="months-grid" id="months-grid"></div>
           </div>
         </div>
         <div class="card">
           <div class="card-header">
             <span class="card-title" id="guard-month-title">أيام الحراسة</span>
-            <button class="btn btn-navy" id="btn-add-guard" onclick="openAddGuard()" style="display:none">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <button class="btn btn-navy desktop-add-btn" id="btn-add-guard" onclick="openAddGuard()" style="display:none">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               إضافة حراسة
             </button>
           </div>
@@ -871,14 +623,7 @@
             <div class="table-wrap">
               <table>
                 <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>الموظف</th>
-                    <th>التاريخ</th>
-                    <th>نوع الحراسة</th>
-                    <th>ملاحظة</th>
-                    <th id="guard-action-head"></th>
-                  </tr>
+                  <tr><th>#</th><th>الموظف</th><th>التاريخ</th><th>النوع</th><th>ملاحظة</th><th id="guard-action-head"></th></tr>
                 </thead>
                 <tbody id="guard-tbody"></tbody>
               </table>
@@ -887,11 +632,18 @@
         </div>
       </div>
 
-      <!-- ── MY BALANCE (user view) ── -->
+      <!-- MY BALANCE -->
       <div id="view-mybalance" class="view"></div>
 
     </div><!-- /content -->
   </div><!-- /main -->
+
+  <!-- Mobile Bottom Nav -->
+  <nav class="mob-bottom-nav" id="mob-bottom-nav"></nav>
+
+  <!-- Mobile FAB -->
+  <button class="mob-fab" id="mob-fab" onclick="fabAction()">+</button>
+
 </div><!-- /app -->
 
 <!-- ══════════════════ MODALS ══════════════════ -->
@@ -905,29 +657,14 @@
     </div>
     <div class="modal-body">
       <div class="field-row">
-        <div class="field">
-          <label>الاسم الأول</label>
-          <input type="text" id="w-fname" placeholder="مثال: أحمد" />
-        </div>
-        <div class="field">
-          <label>الاسم الأخير</label>
-          <input type="text" id="w-lname" placeholder="مثال: بن علي" />
-        </div>
+        <div class="field"><label>الاسم الأول</label><input type="text" id="w-fname" placeholder="مثال: أحمد" /></div>
+        <div class="field"><label>الاسم الأخير</label><input type="text" id="w-lname" placeholder="مثال: بن علي" /></div>
       </div>
       <div class="field-row">
-        <div class="field">
-          <label>القسم</label>
-          <input type="text" id="w-dept" placeholder="مثال: الإدارة" />
-        </div>
-        <div class="field">
-          <label>المنصب</label>
-          <input type="text" id="w-pos" placeholder="مثال: محاسب" />
-        </div>
+        <div class="field"><label>القسم</label><input type="text" id="w-dept" placeholder="مثال: الإدارة" /></div>
+        <div class="field"><label>المنصب</label><input type="text" id="w-pos" placeholder="مثال: محاسب" /></div>
       </div>
-      <div class="field">
-        <label>تاريخ التوظيف</label>
-        <input type="date" id="w-hiredate" />
-      </div>
+      <div class="field"><label>تاريخ التوظيف</label><input type="date" id="w-hiredate" /></div>
     </div>
     <div class="modal-footer">
       <button class="btn btn-outline" onclick="closeModal('modal-worker')">إلغاء</button>
@@ -944,35 +681,19 @@
       <button class="modal-close" onclick="closeModal('modal-leave')">×</button>
     </div>
     <div class="modal-body">
-      <div class="field">
-        <label>الموظف</label>
-        <select id="l-worker"></select>
-      </div>
-      <div class="field">
-        <label>نوع الإجازة</label>
+      <div class="field"><label>الموظف</label><select id="l-worker"></select></div>
+      <div class="field"><label>نوع الإجازة</label>
         <select id="l-type">
           <option value="short">إجازة قصيرة (15 يوم/سنة)</option>
           <option value="long">إجازة طويلة (30 يوم/سنة)</option>
         </select>
       </div>
       <div class="field-row">
-        <div class="field">
-          <label>تاريخ البداية</label>
-          <input type="date" id="l-from" onchange="calcLeaveDays()" />
-        </div>
-        <div class="field">
-          <label>تاريخ النهاية</label>
-          <input type="date" id="l-to" onchange="calcLeaveDays()" />
-        </div>
+        <div class="field"><label>تاريخ البداية</label><input type="date" id="l-from" onchange="calcLeaveDays()" /></div>
+        <div class="field"><label>تاريخ النهاية</label><input type="date" id="l-to" onchange="calcLeaveDays()" /></div>
       </div>
-      <div class="field">
-        <label>عدد الأيام المحسوبة</label>
-        <input type="number" id="l-days" readonly style="background:#f5f7fb" />
-      </div>
-      <div class="field">
-        <label>ملاحظة (اختياري)</label>
-        <textarea id="l-note" rows="2" style="resize:vertical" placeholder="أي ملاحظات إضافية…"></textarea>
-      </div>
+      <div class="field"><label>عدد الأيام المحسوبة</label><input type="number" id="l-days" readonly style="background:#f5f7fb" /></div>
+      <div class="field"><label>ملاحظة (اختياري)</label><textarea id="l-note" rows="2" style="resize:vertical" placeholder="أي ملاحظات إضافية…"></textarea></div>
     </div>
     <div class="modal-footer">
       <button class="btn btn-outline" onclick="closeModal('modal-leave')">إلغاء</button>
@@ -989,26 +710,16 @@
       <button class="modal-close" onclick="closeModal('modal-guard')">×</button>
     </div>
     <div class="modal-body">
-      <div class="field">
-        <label>الموظف</label>
-        <select id="g-worker"></select>
-      </div>
-      <div class="field">
-        <label>التاريخ</label>
-        <input type="date" id="g-date" />
-      </div>
-      <div class="field">
-        <label>نوع الحراسة</label>
+      <div class="field"><label>الموظف</label><select id="g-worker"></select></div>
+      <div class="field"><label>التاريخ</label><input type="date" id="g-date" /></div>
+      <div class="field"><label>نوع الحراسة</label>
         <select id="g-type">
           <option value="ليلية">حراسة ليلية</option>
           <option value="نهارية">حراسة نهارية</option>
           <option value="مناوبة">مناوبة</option>
         </select>
       </div>
-      <div class="field">
-        <label>ملاحظة (اختياري)</label>
-        <input type="text" id="g-note" placeholder="مثال: حراسة عطلة نهاية الأسبوع" />
-      </div>
+      <div class="field"><label>ملاحظة (اختياري)</label><input type="text" id="g-note" placeholder="مثال: حراسة عطلة نهاية الأسبوع" /></div>
     </div>
     <div class="modal-footer">
       <button class="btn btn-outline" onclick="closeModal('modal-guard')">إلغاء</button>
@@ -1033,6 +744,7 @@
 
 <!-- Toast -->
 <div class="toast" id="toast"></div>
+
 
 <script>
 // ══════════════════ DATA & STATE ══════════════════
@@ -1141,32 +853,39 @@ function doLogout() {
 // ══════════════════ APP INIT ══════════════════
 function initApp() {
   const isAdmin = currentUser.role === 'admin';
+
+  // Desktop sidebar
   document.getElementById('sidebar-name').textContent = currentUser.display;
   document.getElementById('sidebar-role').textContent = isAdmin ? 'مدير النظام' : 'مستخدم';
   document.getElementById('sidebar-avatar').textContent = currentUser.display[0];
 
-  // Build nav
-  const adminNav = [
-    { id: 'dashboard', icon: dashIcon(),  label: 'لوحة التحكم' },
-    { id: 'workers',   icon: usersIcon(), label: 'الموظفون' },
-    { id: 'leaves',    icon: calIcon(),   label: 'الإجازات' },
-    { id: 'guard',     icon: shieldIcon(),label: 'الحراسة' },
+  // Mobile topbar
+  document.getElementById('mob-avatar').textContent = currentUser.display[0];
+  document.getElementById('mob-role-badge').textContent = isAdmin ? 'مدير' : 'مستخدم';
+
+  const navItems = [
+    { id: 'dashboard', icon: dashIcon(),   label: 'لوحة التحكم' },
+    { id: 'workers',   icon: usersIcon(),  label: 'الموظفون' },
+    { id: 'leaves',    icon: calIcon(),    label: 'الإجازات' },
+    { id: 'guard',     icon: shieldIcon(), label: 'الحراسة' },
   ];
-  const userNav = [
-    { id: 'dashboard',  icon: dashIcon(),   label: 'لوحة التحكم' },
-    { id: 'workers',    icon: usersIcon(),  label: 'عرض الموظفين' },
-    { id: 'leaves',     icon: calIcon(),    label: 'سجل الإجازات' },
-    { id: 'guard',      icon: shieldIcon(), label: 'أيام الحراسة' },
-  ];
-  const nav = isAdmin ? adminNav : userNav;
-  const navEl = document.getElementById('sidebar-nav');
-  navEl.innerHTML = nav.map(n => `
+
+  // Desktop sidebar nav
+  document.getElementById('sidebar-nav').innerHTML = navItems.map(n => `
     <div class="nav-item ${n.id === 'dashboard' ? 'active' : ''}" onclick="goView('${n.id}')" data-view="${n.id}">
       ${n.icon} ${n.label}
     </div>
   `).join('');
 
-  // Admin-only buttons
+  // Mobile bottom nav — ALL 4 items always visible
+  document.getElementById('mob-bottom-nav').innerHTML = navItems.map(n => `
+    <button class="mob-nav-btn ${n.id === 'dashboard' ? 'active' : ''}" onclick="goView('${n.id}')" data-view="${n.id}">
+      ${n.icon.replace('width="16" height="16"', 'width="20" height="20"')}
+      <span>${n.label}</span>
+    </button>
+  `).join('');
+
+  // Admin-only: show desktop add buttons + FAB
   if (isAdmin) {
     document.getElementById('btn-add-worker').style.display = 'inline-flex';
     document.getElementById('btn-add-leave').style.display = 'inline-flex';
@@ -1176,53 +895,35 @@ function initApp() {
   }
 
   buildMonthsGrid();
-
-  // Mobile nav
-  document.getElementById('mob-avatar').textContent = currentUser.display[0];
-  const mobNav = document.getElementById('mobile-bottom-nav');
-  mobNav.innerHTML = nav.map(n => `
-    <button class="mob-nav-item ${n.id === 'dashboard' ? 'active' : ''}" onclick="goView('${n.id}')" data-view="${n.id}">
-      ${n.icon} <span>${n.label}</span>
-    </button>
-  `).join('');
-
-  // FAB visibility
-  updateFab();
   goView('dashboard');
 }
 
-function updateFab() {
-  const fab = document.getElementById('fab-btn');
-  const isAdmin = currentUser?.role === 'admin';
-  fab.style.display = (isAdmin && activeView !== 'dashboard') ? 'flex' : 'none';
+function fabAction() {
+  if (activeView === 'workers')      openAddWorker();
+  else if (activeView === 'leaves')  openAddLeave();
+  else if (activeView === 'guard')   openAddGuard();
 }
 
-function fabAction() {
-  if (activeView === 'workers')  openAddWorker();
-  else if (activeView === 'leaves') openAddLeave();
-  else if (activeView === 'guard')  openAddGuard();
+function updateFab() {
+  const fab = document.getElementById('mob-fab');
+  const isAdmin = currentUser?.role === 'admin';
+  const showFab = isAdmin && ['workers','leaves','guard'].includes(activeView);
+  fab.style.display = showFab ? 'flex' : 'none';
 }
 
 function goView(v) {
   activeView = v;
   document.querySelectorAll('.view').forEach(el => el.classList.remove('active'));
-  document.querySelectorAll('.nav-item').forEach(el => {
-    el.classList.toggle('active', el.dataset.view === v);
-  });
-  document.querySelectorAll('.mob-nav-item').forEach(el => {
-    el.classList.toggle('active', el.dataset.view === v);
-  });
+  document.querySelectorAll('.nav-item').forEach(el => el.classList.toggle('active', el.dataset.view === v));
+  document.querySelectorAll('.mob-nav-btn').forEach(el => el.classList.toggle('active', el.dataset.view === v));
   const titles = { dashboard: 'لوحة التحكم', workers: 'الموظفون', leaves: 'سجل الإجازات', guard: 'أيام الحراسة', mybalance: 'رصيدي' };
   document.getElementById('topbar-title').textContent = titles[v] || '';
-
   const el = document.getElementById('view-' + v);
   if (el) el.classList.add('active');
-
   if (v === 'dashboard') renderDashboard();
   if (v === 'workers')   renderWorkerTable();
   if (v === 'leaves')    renderLeaveTable();
   if (v === 'guard')     renderGuardTable();
-
   if (typeof updateFab === 'function') updateFab();
 }
 
@@ -1234,39 +935,27 @@ function renderDashboard() {
   const month = new Date().getMonth();
   const thisMonthGuards    = guards.filter(g => new Date(g.date).getMonth() === month).length;
 
-  const shortPct = workers.length ? Math.round(totalShortConsumed / (workers.length * SHORT_LIMIT) * 100) : 0;
-  const longPct  = workers.length ? Math.round(totalLongConsumed  / (workers.length * LONG_LIMIT)  * 100) : 0;
+  const sPct = workers.length ? Math.min(100,Math.round(totalShortConsumed/(workers.length*SHORT_LIMIT)*100)) : 0;
+  const lPct = workers.length ? Math.min(100,Math.round(totalLongConsumed/(workers.length*LONG_LIMIT)*100))  : 0;
   document.getElementById('stats-grid').innerHTML = `
     <div class="stat-card c-navy">
-      <svg class="stat-icon" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;top:10px;left:10px;opacity:.06"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
       <div class="stat-label">إجمالي الموظفين</div>
       <div class="stat-value">${workers.length}</div>
       <div class="stat-sub">موظف مسجل في النظام</div>
     </div>
     <div class="stat-card c-gold">
-      <svg class="stat-icon" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;top:10px;left:10px;opacity:.06"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
       <div class="stat-label">إجازة قصيرة مستهلكة</div>
-      <div class="stat-value">${totalShortConsumed}<span style="font-size:14px;font-weight:500;color:var(--text-light)"> يوم</span></div>
-      <div class="stat-sub" style="display:flex;align-items:center;gap:6px;margin-top:8px">
-        <div style="flex:1;height:5px;background:var(--slate-mid);border-radius:10px;overflow:hidden">
-          <div style="width:${shortPct}%;height:100%;background:var(--gold);border-radius:10px"></div>
-        </div>
-        <span>${shortPct}%</span>
-      </div>
+      <div class="stat-value">${totalShortConsumed} <span style="font-size:13px;font-weight:500;color:var(--text-light)">يوم</span></div>
+      <div class="stat-mini-bar"><div class="stat-mini-fill" style="width:${sPct}%;background:var(--gold)"></div></div>
+      <div class="stat-sub">${sPct}% من الإجمالي</div>
     </div>
     <div class="stat-card c-success">
-      <svg class="stat-icon" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;top:10px;left:10px;opacity:.06"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
       <div class="stat-label">إجازة طويلة مستهلكة</div>
-      <div class="stat-value">${totalLongConsumed}<span style="font-size:14px;font-weight:500;color:var(--text-light)"> يوم</span></div>
-      <div class="stat-sub" style="display:flex;align-items:center;gap:6px;margin-top:8px">
-        <div style="flex:1;height:5px;background:var(--slate-mid);border-radius:10px;overflow:hidden">
-          <div style="width:${longPct}%;height:100%;background:var(--success);border-radius:10px"></div>
-        </div>
-        <span>${longPct}%</span>
-      </div>
+      <div class="stat-value">${totalLongConsumed} <span style="font-size:13px;font-weight:500;color:var(--text-light)">يوم</span></div>
+      <div class="stat-mini-bar"><div class="stat-mini-fill" style="width:${lPct}%;background:var(--success)"></div></div>
+      <div class="stat-sub">${lPct}% من الإجمالي</div>
     </div>
     <div class="stat-card c-warn">
-      <svg class="stat-icon" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;top:10px;left:10px;opacity:.06"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       <div class="stat-label">حراسات هذا الشهر</div>
       <div class="stat-value">${thisMonthGuards}</div>
       <div class="stat-sub">إجمالي الحراسات: <strong>${totalGuards}</strong></div>
@@ -1290,7 +979,7 @@ function renderDashboard() {
       <td>${progBar(lc, LONG_LIMIT)}</td>
       <td>${status}</td>
     </tr>`;
-  }).join('') || `<tr><td colspan="5"><div class="empty-state"><div class="empty-state-icon">${usersIcon().replace('width="16" height="16"','width="28" height="28"')}</div><h3>لا يوجد موظفون</h3><p>أضف موظفين أولاً من قسم الموظفين</p></div></td></tr>`;
+  }).join('') || `<tr><td colspan="5"><div class="empty-state"><p>لا يوجد موظفون</p></div></td></tr>`;
 }
 
 // ══════════════════ WORKERS ══════════════════
@@ -1445,11 +1134,7 @@ function renderLeaveTable() {
   const isAdmin = currentUser?.role === 'admin';
   const tbody = document.getElementById('leaves-tbody');
   if (!filtered.length) {
-    tbody.innerHTML = `<tr><td colspan="8"><div class="empty-state">
-      <div class="empty-state-icon">${calIcon().replace('width="16" height="16"','width="28" height="28"')}</div>
-      <h3>لا توجد إجازات مسجلة</h3>
-      <p>سجّل إجازة جديدة من خلال زر "تسجيل إجازة"</p>
-    </div></td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="8"><div class="empty-state">${emptyIcon()}<p>لا توجد إجازات مسجلة</p></div></td></tr>`;
     return;
   }
   tbody.innerHTML = filtered.map((l, i) => {
@@ -1563,11 +1248,7 @@ function renderGuardTable() {
   const isAdmin = currentUser?.role === 'admin';
   const tbody = document.getElementById('guard-tbody');
   if (!filtered.length) {
-    tbody.innerHTML = `<tr><td colspan="6"><div class="empty-state">
-      <div class="empty-state-icon">${shieldIcon().replace('width="16" height="16"','width="28" height="28"')}</div>
-      <h3>لا توجد حراسات لهذا الشهر</h3>
-      <p>أضف يوم حراسة من زر "إضافة حراسة"</p>
-    </div></td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="6"><div class="empty-state">${emptyIcon()}<p>لا توجد حراسات لهذا الشهر</p></div></td></tr>`;
     return;
   }
   tbody.innerHTML = filtered.map((g, i) => {
